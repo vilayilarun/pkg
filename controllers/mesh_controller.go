@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"context"
-	corev1 "k8s.io/api/core/v1"
 	logr "github.com/go-logr/logr"
+	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -11,6 +11,7 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
+	appsv1 "k8s.io/api/apps/v1"
 
 	meshcomv1alpha1 "github.com/vilayilarun/pkg/api/v1alpha1"
 	v1alpha1 "github.com/vilayilarun/pkg/api/v1alpha1"
