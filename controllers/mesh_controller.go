@@ -1,5 +1,3 @@
-
-
 package controllers
 
 import (
@@ -26,6 +24,7 @@ const (
 // MeshReconciler reconciles a Mesh object
 type MeshReconciler struct {
 	client client.Client
+	Log    logr.Logger
 	Scheme *runtime.Scheme
 }
 
