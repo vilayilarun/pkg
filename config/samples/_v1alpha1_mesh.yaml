@@ -1,0 +1,12 @@
+apiVersion: mesh.com/v1alpha1
+kind: Mesh
+metadata:
+  labels:
+    app.kubernetes.io/name: mesh
+    app.kubernetes.io/instance: mesh-sample
+    app.kubernetes.io/part-of: operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operator
+  name: mesh-sample
+spec:
+  # TODO(user): Add fields here
