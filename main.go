@@ -65,10 +65,10 @@ func main() {
 	flag.Parse()
 
 	ctrl.SetLogger(zap.New(zap.UseFlagOptions(&opts)))
-	mgrOptions := manager.Options{
-		MetricsBindAddress: "0.0.0.0:8080",
-		// Add other options here if needed
-	}
+	// mgrOptions := manager.Options{
+	// 	MetricsBindAddress: "0.0.0.0:8080",
+	// 	// Add other options here if needed
+	// }
 
 	mgr, err := ctrl.NewManager(ctrl.GetConfigOrDie(), ctrl.Options{
 		Scheme:                 scheme,
