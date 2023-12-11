@@ -11,10 +11,10 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/controller-runtime/pkg/log"
-	"sigs.k8s.io/controller-runtime/pkg/controller/reconcile"
+	// "sigs.k8s.io/controller-runtime/pkg/log"
+	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	meshcomv1alpha1 "github.com/vilayilarun/pkg/api/v1alpha1"
+	// meshcomv1alpha1 "github.com/vilayilarun/pkg/api/v1alpha1"
 	v1alpha1 "github.com/vilayilarun/pkg/api/v1alpha1"
 )
 
