@@ -23,11 +23,10 @@ type MeshReconciler struct {
 	Log    logr.Logger
 }
 
-// var (
-// 	scheme   = runtime.NewScheme()
-// 	setupLog = ctrl.Log.WithName("setup")
-// )
-utilruntime.Must(clientgoscheme.AddToScheme(scheme))
+var (
+	scheme   = runtime.NewScheme()
+	setupLog = ctrl.Log.WithName("setup")
+)
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
