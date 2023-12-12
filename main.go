@@ -86,12 +86,12 @@
 // 		os.Exit(1)
 // 	}
 
-// 	setupLog.Info("starting manager")
-// 	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
-// 		setupLog.Error(err, "problem running manager")
-// 		os.Exit(1)
-// 	}
-// }
+//		setupLog.Info("starting manager")
+//		if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
+//			setupLog.Error(err, "problem running manager")
+//			os.Exit(1)
+//		}
+//	}
 package main
 
 import (
@@ -100,9 +100,9 @@ import (
 	"os"
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
 	// to ensure that exec-entrypoint and run can make use of them.
-	"k8s.io/client-go/kubernetes/scheme"
-	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/runtime"
+	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
+	"k8s.io/client-go/kubernetes/scheme"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	ctrl "sigs.k8s.io/controller-runtime"
