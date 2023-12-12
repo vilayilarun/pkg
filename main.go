@@ -1,15 +1,17 @@
-
 package main
 
 import (
 	// other imports...
 	"github.com/go-logr/logr"
+	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes/scheme"
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
+	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
+
 
 	meshcomv1alpha1 "github.com/vilayilarun/pkg/api/v1alpha1"
 	"github.com/vilayilarun/pkg/controllers"
@@ -21,11 +23,11 @@ type MeshReconciler struct {
 	Log    logr.Logger
 }
 
-var (
-	scheme   = runtime.NewScheme()
-	setupLog = ctrl.Log.WithName("setup")
-)
-
+// var (
+// 	scheme   = runtime.NewScheme()
+// 	setupLog = ctrl.Log.WithName("setup")
+// )
+utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
